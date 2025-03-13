@@ -30,7 +30,7 @@ const options = {
     deltaTime = selectedDate - currentDate;
 
     if (selectedDate <= currentDate) {
-      return Notiflix.Notify.failure('Please choose a date in the future');
+      errorMessageDate();
     }
 
     buttonEl.removeAttribute('disabled');
@@ -88,6 +88,18 @@ function stopTimer() {
   ) {
     clearInterval(intervalId);
   }
+}
+
+function errorMessageDate() {
+  iziToast.error({
+    backgroundColor: 'tomato',
+    message: 'Please choose a date in the future',
+    messageColor: 'white',
+    messageSize: '20',
+    position: 'topRight',
+    close: true,
+    displayMode: 2,
+  });
 }
 
 function updateComponentsTimer({ days, hours, minutes, seconds }) {
