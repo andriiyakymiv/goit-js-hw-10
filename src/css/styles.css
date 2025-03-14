@@ -1,0 +1,40 @@
+ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #EEEEEE;
+}
+
+.page__list {
+    display: flex;
+    gap: 30px;
+    
+}
+
+.page__list-item{
+    background: #00ADB5;
+    width: 340px;
+    padding: 260px 16px 23px 16px;
+    border: 0px solid rgba(216, 216, 216, 0);
+}
+
+.page__list-link {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.13;
+    color: #222831;
+    
+}
+
+.page__list-link:hover {
+    color: #393E46;
+}
+
+.page__list-description {
+    color: #222831;
+}
