@@ -3,6 +3,7 @@ import 'flatpickr/dist/flatpickr.min.css';
 
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
+import iconError from '../img/icon-error.svg';
 
 const dataPickerEl = document.querySelector('#datetime-picker');
 const buttonEl = document.querySelector('button');
@@ -97,7 +98,7 @@ function errorMessageDate() {
     titleSize: '16px',
     titleColor: '#FFFFFF',
     backgroundColor: '#EF4040',
-    icon: 'fa-user',
+    iconUrl: iconError,
     iconColor: '#FFFFFF',
     messageColor: '#FFFFFF',
     messageSize: '16px',
