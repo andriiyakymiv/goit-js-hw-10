@@ -1,16 +1,19 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
+import iconSucces from '../img/icon-succes.svg';
+import iconHello from '../img/icon-hello.svg';
 
 const startGreeting = () => {
   iziToast.show({
-    close: false,
     position: 'topRight',
-    progressBarColor: '#0071BD',
     title: 'Hello',
     titleColor: '#FFFFFF',
     message: 'Welcome',
     messageColor: '#FFFFFF',
+    iconUrl: iconHello,
+    color: '#FFFFFF',
     backgroundColor: '#0099FF',
+    progressBarColor: '#0071BD',
   });
 };
 
@@ -37,14 +40,23 @@ form.addEventListener('submit', event => {
   createPromise
     .then(delay => {
       iziToast.success({
-        title: 'Fulfilled Promise',
-        message: `✅ Fulfilled promise in ${delay}ms`,
+        title: 'OK',
+        titleSize: '16px',
+        message: `Fulfilled promise in ${delay}ms`,
+        position: 'topRight',
+        timeout: 1000,
+        close: false,
+        iconUrl: iconSucces,
       });
     })
     .catch(delay => {
       iziToast.error({
-        title: 'Rejected Promise',
-        message: `❌ Rejected promise in ${delay}ms`,
+        title: 'Error',
+        titleSize: '16px',
+        message: `Rejected promise in ${delay}ms`,
+        position: 'topRight',
+        timeout: 5000,
+        close: false,
       });
     });
 });
