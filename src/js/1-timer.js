@@ -92,13 +92,19 @@ function stopTimer() {
 
 function errorMessageDate() {
   iziToast.error({
-    backgroundColor: 'tomato',
+    title: 'Error',
     message: 'Please choose a date in the future',
-    messageColor: 'white',
-    messageSize: '20',
+    titleSize: '16px',
+    titleColor: '#FFFFFF',
+    backgroundColor: '#EF4040',
+    icon: 'fa-user',
+    iconColor: '#FFFFFF',
+    messageColor: '#FFFFFF',
+    messageSize: '16px',
     position: 'topRight',
     close: true,
     displayMode: 2,
+    progressBarColor: '#B51B1B',
   });
 }
 
