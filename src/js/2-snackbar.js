@@ -55,7 +55,7 @@ form.addEventListener('submit', event => {
         titleSize: '16px',
         message: `Rejected promise in ${delay}ms`,
         position: 'topRight',
-        timeout: 5000,
+        timeout: 1000,
         close: false,
       });
     });
